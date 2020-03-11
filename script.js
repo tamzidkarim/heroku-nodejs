@@ -1,11 +1,12 @@
 const express = require('express');
 var xlsx = require('@sheet/core');
 const fs = require('fs');
-const cors = require('./cors');
+const cors = require('cors');
 
 const app = express();
 
-cors();
+app.use(cors());
+
 const getSubsection = (ws0, from, to) => {
   const range = to - from;
   var value = [];
@@ -44,7 +45,7 @@ sectionValue[4] = ws0['A68'] ? ws0['A68'].v : undefined;
 sectionValue[5] = ws0['A104'] ? ws0['A104'].v : undefined;
 sectionValue[6] = ws0['A111'] ? ws0['A111'].v : undefined;
 sectionValue[7] = ws0['A122'] ? ws0['A122'].v : undefined;
-console.log(sectionValue);
+// console.log(sectionValue);
 
 //SIBSECTION VALUE
 var subsectionValue = [];
@@ -57,7 +58,7 @@ subsectionValue[5] = getSubsection(ws0, 105, 109);
 subsectionValue[6] = getSubsection(ws0, 112, 120);
 subsectionValue[7] = getSubsection(ws0, 123, 143);
 
-console.log(subsectionValue.length);
+// console.log(subsectionValue.length);
 
 for (let i = 0; i < sectionValue.length; i++) {
   file[i] = {
@@ -68,7 +69,7 @@ for (let i = 0; i < sectionValue.length; i++) {
 }
 
 // let jsonFile = JSON.stringify(file);
-console.log(file);
+// console.log(file);
 
 app.get('/', (req, res) => {
   res.json(file);
