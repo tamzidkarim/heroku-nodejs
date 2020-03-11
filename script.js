@@ -1,40 +1,77 @@
 const express = require('express');
-
 var xlsx = require('@sheet/core');
+const fs = require('fs');
+const cors = require('./cors');
 
 const app = express();
 
-const wb = xlsx.readFile('SalesData.xlsx');
-const fs = require('fs');
+cors();
+const getSubsection = (ws0, from, to) => {
+  const range = to - from;
+  var value = [];
+  for (let i = 0; i <= range; i++) {
+    value[i] = ws0[`A${i + from}`] ? ws0[`A${i + from}`].v : undefined;
+  }
+  return value;
+};
+
+const wb = xlsx.readFile('data.xlsx');
 
 const sheetNames = wb.SheetNames;
-console.log(sheetNames);
 
-var ws0 = wb.Sheets[`${sheetNames[0]}`];
-var data = xlsx.utils.sheet_to_json(ws0);
+var ws0 = wb.Sheets[`${sheetNames[2]}`];
 
-console.log(data);
+// var data = xlsx.utils.sheet_to_json(ws0);
 
-let data1 = JSON.stringify(data);
-console.log(data1);
+// let data1 = JSON.stringify(data);
 
-fs.writeFileSync('SalesData.json', data1);
+// fs.writeFileSync('data.json', data1);
+var file = [
+  {
+    section: '',
+    subsection: [''],
+    answer: 'null',
+  },
+];
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With,Content-Type, Accept, Authorization'
-  );
-  if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
-    return res.status(200).json({});
-  }
-  next();
-});
+//SECTION VALUE
+var sectionValue = [];
+sectionValue[0] = ws0['A2'] ? ws0['A2'].v : undefined;
+sectionValue[1] = ws0['A12'] ? ws0['A12'].v : undefined;
+sectionValue[2] = ws0['A20'] ? ws0['A20'].v : undefined;
+sectionValue[3] = ws0['A57'] ? ws0['A57'].v : undefined;
+sectionValue[4] = ws0['A68'] ? ws0['A68'].v : undefined;
+sectionValue[5] = ws0['A104'] ? ws0['A104'].v : undefined;
+sectionValue[6] = ws0['A111'] ? ws0['A111'].v : undefined;
+sectionValue[7] = ws0['A122'] ? ws0['A122'].v : undefined;
+console.log(sectionValue);
+
+//SIBSECTION VALUE
+var subsectionValue = [];
+subsectionValue[0] = getSubsection(ws0, 3, 10);
+subsectionValue[1] = getSubsection(ws0, 13, 18);
+subsectionValue[2] = getSubsection(ws0, 21, 55);
+subsectionValue[3] = getSubsection(ws0, 58, 66);
+subsectionValue[4] = getSubsection(ws0, 69, 102);
+subsectionValue[5] = getSubsection(ws0, 105, 109);
+subsectionValue[6] = getSubsection(ws0, 112, 120);
+subsectionValue[7] = getSubsection(ws0, 123, 143);
+
+console.log(subsectionValue.length);
+
+for (let i = 0; i < sectionValue.length; i++) {
+  file[i] = {
+    section: sectionValue[i],
+    subsection: subsectionValue[i],
+    answer: '',
+  };
+}
+
+// let jsonFile = JSON.stringify(file);
+console.log(file);
 
 app.get('/', (req, res) => {
-  res.json(data);
+  res.json(file);
 });
 
 app.listen(4500);
@@ -49,3 +86,22 @@ app.listen(4500);
 // xlsx.utils.book_append_sheet(newWb, newWs1, 'ws1');
 
 // xlsx.writeFile(wb, 'New Data.xlsx', { cellStyles: true });
+
+var sheet2arr = function(sheet) {
+  var result = [];
+  var row;
+  var rowNum;
+  var colNum;
+  var range = xlsx.utils.decode_range(sheet['!ref']);
+  for (rowNum = range.s.r; rowNum <= range.e.r; rowNum++) {
+    row = [];
+    for (colNum = range.s.c; colNum <= range.e.c; colNum++) {
+      var nextCell = sheet[xlsx.utils.encode_cell({ r: rowNum, c: colNum })];
+      if (typeof nextCell === 'undefined') {
+        row.push(void 0);
+      } else row.push(nextCell.w);
+    }
+    result.push(row);
+  }
+  return result;
+};

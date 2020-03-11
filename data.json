@@ -1,0 +1,408 @@
+[
+    {
+        "Requirement": "General Information"
+    },
+    {
+        "Requirement": "1. Company name"
+    },
+    {
+        "Requirement": "2. Company address (corporate)"
+    },
+    {
+        "Requirement": "3. Company telephone"
+    },
+    {
+        "Requirement": "4. Company fax"
+    },
+    {
+        "Requirement": "5. Web site"
+    },
+    {
+        "Requirement": "6. Year company founded"
+    },
+    {
+        "Requirement": "7. Company CEO and years with company"
+    },
+    {
+        "Requirement": "8. Senior management team (names, titles, years with company)"
+    },
+    {
+        "Requirement": "Contact Information"
+    },
+    {
+        "Requirement": "1. Proposal contact name"
+    },
+    {
+        "Requirement": "2. Title"
+    },
+    {
+        "Requirement": "3. Contact address"
+    },
+    {
+        "Requirement": "4. Contact telephone "
+    },
+    {
+        "Requirement": "5. Contact e-mail address"
+    },
+    {
+        "Requirement": "6. Contact mobile phone"
+    },
+    {
+        "Requirement": "Financials"
+    },
+    {
+        "Requirement": "1.  Public or private (if private, skip to 3, if public go to 2)"
+    },
+    {
+        "Requirement": "2.  Stock exchange and ticker symbol"
+    },
+    {
+        "Requirement": "3.  Describe ownership structure (attach additional information if required)"
+    },
+    {
+        "Requirement": "4.  Month in which fiscal year ends"
+    },
+    {
+        "Requirement": "5.  YTD Results (2008)"
+    },
+    {
+        "Requirement": "5.1 Revenue"
+    },
+    {
+        "Requirement": "5.2 Profit"
+    },
+    {
+        "Requirement": "5.3 Software revenue"
+    },
+    {
+        "Requirement": "5.4 Service revenue"
+    },
+    {
+        "Requirement": "5.5 Hardware revenue"
+    },
+    {
+        "Requirement": "5.6 Support/maintenance revenue"
+    },
+    {
+        "Requirement": "6.  2007 Results"
+    },
+    {
+        "Requirement": "6.1 Revenue"
+    },
+    {
+        "Requirement": "6.2 Profit"
+    },
+    {
+        "Requirement": "6.3 Software revenue"
+    },
+    {
+        "Requirement": "6.4 Service revenue"
+    },
+    {
+        "Requirement": "6.5 Hardware revenue"
+    },
+    {
+        "Requirement": "6.6 Support/maintenance revenue"
+    },
+    {
+        "Requirement": "7. 2006 Results"
+    },
+    {
+        "Requirement": "7.1 Revenue"
+    },
+    {
+        "Requirement": "7.2 Profit"
+    },
+    {
+        "Requirement": "7.3 Software revenue"
+    },
+    {
+        "Requirement": "7.4 Service revenue"
+    },
+    {
+        "Requirement": "7.5 Hardware revenue"
+    },
+    {
+        "Requirement": "7.6 Support/maintenance revenue"
+    },
+    {
+        "Requirement": "8.  Current Balance Sheet Information"
+    },
+    {
+        "Requirement": "8.1 Cash and cash equivalents"
+    },
+    {
+        "Requirement": "8.2 Other current assets"
+    },
+    {
+        "Requirement": "8.3 Current liabilities"
+    },
+    {
+        "Requirement": "8.4 Quick ratio (current assets - current liabilities)"
+    },
+    {
+        "Requirement": "8.5 Total amount of debt"
+    },
+    {
+        "Requirement": "9. Litigation"
+    },
+    {
+        "Requirement": "9.1 Any litigation pending?"
+    },
+    {
+        "Requirement": "9.2 Number of lawsuits in history of company?"
+    },
+    {
+        "Requirement": "10. Are you currently in any discussions about being acquired? "
+    },
+    {
+        "Requirement": "Employee Information"
+    },
+    {
+        "Requirement": "1.  Total number "
+    },
+    {
+        "Requirement": "2.  Number by function"
+    },
+    {
+        "Requirement": "2.1 Sales"
+    },
+    {
+        "Requirement": "2.2 Marketing/alliances"
+    },
+    {
+        "Requirement": "2.3 Professional services"
+    },
+    {
+        "Requirement": "2.4 Technical support"
+    },
+    {
+        "Requirement": "2.5 Research and development"
+    },
+    {
+        "Requirement": "2.6 G&A"
+    },
+    {
+        "Requirement": "2.7 Other"
+    },
+    {
+        "Requirement": "Support"
+    },
+    {
+        "Requirement": "1.   Warranty"
+    },
+    {
+        "Requirement": "1.1 Standard warranty period"
+    },
+    {
+        "Requirement": "1.2  What is included?  (attach if necessary)"
+    },
+    {
+        "Requirement": "1.3  Location of customer support offices"
+    },
+    {
+        "Requirement": "2.  Maintenance"
+    },
+    {
+        "Requirement": "2.1 Standard maintenance policy  (attach if necessary)"
+    },
+    {
+        "Requirement": "2.2 Patches included?"
+    },
+    {
+        "Requirement": "2.2.1 How are patches distributed?"
+    },
+    {
+        "Requirement": "2.3 Upgrades"
+    },
+    {
+        "Requirement": " 2.3.1  How often are new releases available?"
+    },
+    {
+        "Requirement": "2.3.2 How long does it take the average customer to complete an upgrade (including re-application of system modifications)?"
+    },
+    {
+        "Requirement": "2.3.3 From start to finish, what was the longest time taken by any customer to complete an upgrade?"
+    },
+    {
+        "Requirement": "2.3.4 What is the average cost to complete an upgrade?"
+    },
+    {
+        "Requirement": "2.3.5 What is the greatest cost ever incurred by a customer during an upgrade?"
+    },
+    {
+        "Requirement": "2.3.6 Must custom code always be re-applied during upgrade?"
+    },
+    {
+        "Requirement": "2.3.7 Do you guarantee your upgrade price?"
+    },
+    {
+        "Requirement": "3.  Support",
+        "Response": " "
+    },
+    {
+        "Requirement": "3.1 Standard support policy (attach if necessary)"
+    },
+    {
+        "Requirement": "3.2 Price based upon sold price or current price?"
+    },
+    {
+        "Requirement": "3.3 Price increases in last 5 years?"
+    },
+    {
+        "Requirement": "3.4 Provided by vendor or 3rd Party?"
+    },
+    {
+        "Requirement": "3.5 Support location?"
+    },
+    {
+        "Requirement": "3.6 Escalation policy  (attach if necessary)"
+    },
+    {
+        "Requirement": "3.7 How far back are releases supported?"
+    },
+    {
+        "Requirement": "3.8 24/7 available?"
+    },
+    {
+        "Requirement": "3.8.1 24/7 staffed or beeper?"
+    },
+    {
+        "Requirement": "3.9 Web support "
+    },
+    {
+        "Requirement": "3.9.1 Provided?"
+    },
+    {
+        "Requirement": "3.9.2 Patches available?"
+    },
+    {
+        "Requirement": "3.9.2 Create new call?"
+    },
+    {
+        "Requirement": "3.9.3 Check call status?"
+    },
+    {
+        "Requirement": "3.10  Support computer hardware?"
+    },
+    {
+        "Requirement": "3.11  Support RF hardware?"
+    },
+    {
+        "Requirement": "3.12  Do you support customer-modified applications?"
+    },
+    {
+        "Requirement": "User Conference"
+    },
+    {
+        "Requirement": "1. Is there a user conference?"
+    },
+    {
+        "Requirement": "2. Year established?"
+    },
+    {
+        "Requirement": "3. Meet how often?"
+    },
+    {
+        "Requirement": "4. Date of last user conference?"
+    },
+    {
+        "Requirement": "5. Number of attendees at last user conference?"
+    },
+    {
+        "Requirement": "Customer Base"
+    },
+    {
+        "Requirement": "1. Total number of data collection customers?"
+    },
+    {
+        "Requirement": "2. Active number of data collection customers?"
+    },
+    {
+        "Requirement": "3. Number of data collection sites (across all customers)?"
+    },
+    {
+        "Requirement": "4. Number of data collection customers on maintenance?"
+    },
+    {
+        "Requirement": "5. Number of data collection customers that have upgraded?"
+    },
+    {
+        "Requirement": "6. New data collection customers"
+    },
+    {
+        "Requirement": "6.1 YTD"
+    },
+    {
+        "Requirement": "6.2 Last year"
+    },
+    {
+        "Requirement": "7. Number of data collection customers on latest release?"
+    },
+    {
+        "Requirement": "Training"
+    },
+    {
+        "Requirement": "1. Describe the overall approach of your training program (attach additional information if required)"
+    },
+    {
+        "Requirement": "2. Classroom training available?"
+    },
+    {
+        "Requirement": "2.1 Classes offered  (attach if necessary)?"
+    },
+    {
+        "Requirement": "2.2 Describe the pricing for classes"
+    },
+    {
+        "Requirement": "2.3 What is schedule for upcoming classes?"
+    },
+    {
+        "Requirement": "2.4 Where are the classes held?"
+    },
+    {
+        "Requirement": "2.5 What is the maximum and minimum class size?"
+    },
+    {
+        "Requirement": "2.6 What is your cancellation policy?"
+    },
+    {
+        "Requirement": "2.7 Describe the credentials of your instructors"
+    },
+    {
+        "Requirement": "2.8 Do you have online registration?"
+    },
+    {
+        "Requirement": "3.  Online training available via the Web?"
+    },
+    {
+        "Requirement": "3.1 Courses offered (attach if necessary)"
+    },
+    {
+        "Requirement": "3.2 Describe the pricing for the online courses"
+    },
+    {
+        "Requirement": "3.3 Online testing available?"
+    },
+    {
+        "Requirement": "3.4 What are the connectivity requirements?"
+    },
+    {
+        "Requirement": "4. Do you offer customized or on-site training?"
+    },
+    {
+        "Requirement": "5. What types of media/activities are employed in training?"
+    },
+    {
+        "Requirement": "5.1 Written materials"
+    },
+    {
+        "Requirement": "5.2 Audio/visual"
+    },
+    {
+        "Requirement": "5.3 Hyperlinked reference materials"
+    },
+    {
+        "Requirement": "5.4 Hands-on workshops"
+    }
+]
