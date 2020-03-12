@@ -16,7 +16,7 @@ const getSubsection = (ws0, from, to) => {
   return value;
 };
 
-const wb = xlsx.readFile('data.xls');
+const wb = xlsx.readFile('data.xlsx');
 
 const sheetNames = wb.SheetNames;
 
@@ -29,7 +29,7 @@ var ws0 = wb.Sheets[`${sheetNames[2]}`];
 // fs.writeFileSync('data.json', data1);
 var file = [
   {
-    section: '',
+    section: [''],
     subsection: [''],
     answer: 'null',
   },
@@ -76,12 +76,20 @@ for (let i = 0; i < sectionValue.length; i++) {
     subsection: subsectionValue[i],
     answer: '',
   };
+  var merge = [file[i].section];
+  file[i].subsection.forEach(element => {
+    merge.push(element);
+  });
+  // Array.prototype.push.apply(merge[i], submerge[i]);
+
+  console.log(merge);
+
   mergedFile[i] = {
-    merged: file[i].section + ' ' + file[i].subsection,
+    merged: merge,
     answer: '',
   };
 }
-console.log(mergedFile);
+// console.log(file);
 
 // let jsonFile = JSON.stringify(file);
 // console.log(file);
@@ -90,10 +98,10 @@ app.get('/', (req, res) => {
   res.json(mergedFile);
 });
 
-app.post('/export', (req, res) => {
-  xlsx.writeFile(wb, 'newData.xlsx', { cellStyles: true });
-  res.statusCode(200).send('Excel file generated successsfully');
-});
+// app.post('/export', (req, res) => {
+//   xlsx.writeFile(wb, 'newData.xlsx', { cellStyles: true });
+//   res.statusCode(200).send('Excel file generated successsfully');
+// });
 
 app.listen(4500);
 
